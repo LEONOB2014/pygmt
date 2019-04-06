@@ -22,13 +22,20 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
@@ -37,21 +44,16 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="pygmt.clib.Session.destroy" href="pygmt.clib.Session.destroy.html" />
     <link rel="prev" title="pygmt.clib.Session.virtualfile_from_grid" href="pygmt.clib.Session.virtualfile_from_grid.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
     <a href="../../index.html"><h2 class="sidebar-title">PyGMT</h2></a>
 
@@ -86,8 +88,9 @@
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Installing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials/overview.html">Making your first figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/first-figure.html">Making your first figure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gallery/index.html">Gallery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">User Guide</span></p>
@@ -252,8 +255,8 @@
 <p>This is required before most other methods of <a class="reference internal" href="pygmt.clib.Session.html#pygmt.clib.Session" title="pygmt.clib.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">pygmt.clib.Session</span></code></a> can be
 called.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">Usage of <code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code> as a context manager in a <code class="docutils literal notranslate"><span class="pre">with</span></code> block
+<p class="admonition-title">Warning</p>
+<p>Usage of <code class="xref py py-class docutils literal notranslate"><span class="pre">Session</span></code> as a context manager in a <code class="docutils literal notranslate"><span class="pre">with</span></code> block
 is preferred over calling <code class="xref py py-meth docutils literal notranslate"><span class="pre">create</span></code> and
 <code class="xref py py-meth docutils literal notranslate"><span class="pre">destroy</span></code> manually.</p>
 </div>
@@ -262,19 +265,14 @@ is a <a class="reference external" href="https://docs.python.org/3/library/ctype
 this pointer.</p>
 <p>Remember to terminate the current session using <a class="reference internal" href="pygmt.clib.Session.destroy.html#pygmt.clib.Session.destroy" title="pygmt.clib.Session.destroy"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pygmt.clib.Session.destroy</span></code></a>
 before creating a new one.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>name</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">A name for this session. Doesn’t really affect the outcome.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>name</strong><span class="classifier">str</span></dt><dd><p>A name for this session. Doesn’t really affect the outcome.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <div style='clear:both'></div></div>
@@ -290,7 +288,7 @@ before creating a new one.</p>
         <a href="pygmt.clib.Session.destroy.html" class="btn btn-neutral float-right" title="pygmt.clib.Session.destroy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pygmt.clib.Session.virtualfile_from_grid.html" class="btn btn-neutral" title="pygmt.clib.Session.virtualfile_from_grid" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pygmt.clib.Session.virtualfile_from_grid.html" class="btn btn-neutral float-left" title="pygmt.clib.Session.virtualfile_from_grid" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -300,7 +298,9 @@ before creating a new one.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017-2019, The PyGMT Developers.
-      Last updated on Jan 26, 2019.
+      <span class="lastupdated">
+        Last updated on Apr 06, 2019.
+      </span>
 
     </p>
   </div>
@@ -317,26 +317,16 @@ before creating a new one.</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

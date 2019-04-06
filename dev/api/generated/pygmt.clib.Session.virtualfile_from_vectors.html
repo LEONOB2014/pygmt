@@ -22,13 +22,20 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
@@ -37,21 +44,16 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="pygmt.clib.Session.virtualfile_from_grid" href="pygmt.clib.Session.virtualfile_from_grid.html" />
     <link rel="prev" title="pygmt.clib.Session.virtualfile_from_matrix" href="pygmt.clib.Session.virtualfile_from_matrix.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
     <a href="../../index.html"><h2 class="sidebar-title">PyGMT</h2></a>
 
@@ -86,8 +88,9 @@
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Installing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials/overview.html">Making your first figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/first-figure.html">Making your first figure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gallery/index.html">Gallery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">User Guide</span></p>
@@ -259,27 +262,21 @@ of the <code class="docutils literal notranslate"><span class="pre">with</span><
 <p>If the arrays are C contiguous blocks of memory, they will be passed without
 copying to GMT. If they are not (e.g., they are columns of a 2D array), they
 will need to be copied to a contiguous block.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>vectors</strong> <span class="classifier-delimiter">:</span> <span class="classifier">1d arrays</span></dt>
-<dd><p class="first last">The vectors that will be included in the array. All must be of the same
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>vectors</strong><span class="classifier">1d arrays</span></dt><dd><p>The vectors that will be included in the array. All must be of the same
 size.</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Yields:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>fname</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">The name of virtual file. Pass this as a file name argument to a GMT module.</p>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>fname</strong><span class="classifier">str</span></dt><dd><p>The name of virtual file. Pass this as a file name argument to a GMT module.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Examples</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pygmt.helpers</span> <span class="k">import</span> <span class="n">GMTTempFile</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -311,7 +308,7 @@ size.</p>
         <a href="pygmt.clib.Session.virtualfile_from_grid.html" class="btn btn-neutral float-right" title="pygmt.clib.Session.virtualfile_from_grid" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pygmt.clib.Session.virtualfile_from_matrix.html" class="btn btn-neutral" title="pygmt.clib.Session.virtualfile_from_matrix" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pygmt.clib.Session.virtualfile_from_matrix.html" class="btn btn-neutral float-left" title="pygmt.clib.Session.virtualfile_from_matrix" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -321,7 +318,9 @@ size.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017-2019, The PyGMT Developers.
-      Last updated on Jan 26, 2019.
+      <span class="lastupdated">
+        Last updated on Apr 06, 2019.
+      </span>
 
     </p>
   </div>
@@ -338,26 +337,16 @@ size.</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

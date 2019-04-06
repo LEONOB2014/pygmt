@@ -22,13 +22,20 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
@@ -37,21 +44,16 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="pygmt.clib.Session.extract_region" href="pygmt.clib.Session.extract_region.html" />
     <link rel="prev" title="pygmt.clib.Session.write_data" href="pygmt.clib.Session.write_data.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
     <a href="../../index.html"><h2 class="sidebar-title">PyGMT</h2></a>
 
@@ -86,8 +88,9 @@
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Installing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials/overview.html">Making your first figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/first-figure.html">Making your first figure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gallery/index.html">Gallery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">User Guide</span></p>
@@ -256,38 +259,29 @@ or output file.</p>
 <p>Use in a <code class="docutils literal notranslate"><span class="pre">with</span></code> block. Will automatically close the virtual file when
 leaving the <code class="docutils literal notranslate"><span class="pre">with</span></code> block. Because of this, no wrapper for
 <code class="docutils literal notranslate"><span class="pre">GMT_Close_VirtualFile</span></code> is provided.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>family</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">A valid GMT data family name (e.g., <code class="docutils literal notranslate"><span class="pre">'GMT_IS_DATASET'</span></code>). Should
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>family</strong><span class="classifier">str</span></dt><dd><p>A valid GMT data family name (e.g., <code class="docutils literal notranslate"><span class="pre">'GMT_IS_DATASET'</span></code>). Should
 be the same as the one you used to create your data structure.</p>
 </dd>
-<dt><strong>geometry</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">A valid GMT data geometry name (e.g., <code class="docutils literal notranslate"><span class="pre">'GMT_IS_POINT'</span></code>). Should
+<dt><strong>geometry</strong><span class="classifier">str</span></dt><dd><p>A valid GMT data geometry name (e.g., <code class="docutils literal notranslate"><span class="pre">'GMT_IS_POINT'</span></code>). Should
 be the same as the one you used to create your data structure.</p>
 </dd>
-<dt><strong>direction</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">Either <code class="docutils literal notranslate"><span class="pre">'GMT_IN'</span></code> or <code class="docutils literal notranslate"><span class="pre">'GMT_OUT'</span></code> to indicate if passing data to
+<dt><strong>direction</strong><span class="classifier">str</span></dt><dd><p>Either <code class="docutils literal notranslate"><span class="pre">'GMT_IN'</span></code> or <code class="docutils literal notranslate"><span class="pre">'GMT_OUT'</span></code> to indicate if passing data to
 GMT or getting it out of GMT, respectively.</p>
 </dd>
-<dt><strong>data</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd><p class="first last">The ctypes void pointer to your GMT data structure.</p>
+<dt><strong>data</strong><span class="classifier">int</span></dt><dd><p>The ctypes void pointer to your GMT data structure.</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Yields:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>vfname</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">The name of the virtual file that you can pass to a GMT module.</p>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>vfname</strong><span class="classifier">str</span></dt><dd><p>The name of the virtual file that you can pass to a GMT module.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Examples</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pygmt.helpers</span> <span class="k">import</span> <span class="n">GMTTempFile</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">os</span>
@@ -331,7 +325,7 @@ GMT or getting it out of GMT, respectively.</p>
         <a href="pygmt.clib.Session.extract_region.html" class="btn btn-neutral float-right" title="pygmt.clib.Session.extract_region" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pygmt.clib.Session.write_data.html" class="btn btn-neutral" title="pygmt.clib.Session.write_data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pygmt.clib.Session.write_data.html" class="btn btn-neutral float-left" title="pygmt.clib.Session.write_data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -341,7 +335,9 @@ GMT or getting it out of GMT, respectively.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017-2019, The PyGMT Developers.
-      Last updated on Jan 26, 2019.
+      <span class="lastupdated">
+        Last updated on Apr 06, 2019.
+      </span>
 
     </p>
   </div>
@@ -358,26 +354,16 @@ GMT or getting it out of GMT, respectively.</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

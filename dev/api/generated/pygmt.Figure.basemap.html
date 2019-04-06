@@ -22,13 +22,20 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
@@ -37,21 +44,16 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="pygmt.Figure.coast" href="pygmt.Figure.coast.html" />
     <link rel="prev" title="pygmt.Figure" href="pygmt.Figure.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
     <a href="../../index.html"><h2 class="sidebar-title">PyGMT</h2></a>
 
@@ -86,8 +88,9 @@
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Installing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials/overview.html">Making your first figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/first-figure.html">Making your first figure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gallery/index.html">Gallery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">User Guide</span></p>
@@ -110,6 +113,7 @@
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.grdimage.html">pygmt.Figure.grdimage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.logo.html">pygmt.Figure.logo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.image.html">pygmt.Figure.image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.shift_origin.html">pygmt.Figure.shift_origin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.savefig.html">pygmt.Figure.savefig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.show.html">pygmt.Figure.show</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.psconvert.html">pygmt.Figure.psconvert</a></li>
@@ -248,50 +252,39 @@ separate tick-mark intervals for boundary annotation, ticking, and
 [optionally] gridlines. A simple map scale or directional rose may also
 be plotted.</p>
 <p>At least one of the options <em>B</em>, <em>L</em>, or <em>T</em> must be specified.</p>
-<p>Full option list at <a class="reference external" href="http://gmt.soest.hawaii.edu/doc/latest/basemap.html">http://gmt.soest.hawaii.edu/doc/latest/basemap.html</a></p>
+<p>Full option list at <a class="reference external" href="https://www.generic-mapping-tools.org/gmt/latest/basemap.html">https://www.generic-mapping-tools.org/gmt/latest/basemap.html</a></p>
 <p><strong>Aliases:</strong></p>
 <ul class="simple">
-<li>B = frame</li>
-<li>J = projection</li>
-<li>R = region</li>
+<li><p>B = frame</p></li>
+<li><p>J = projection</p></li>
+<li><p>R = region</p></li>
 </ul>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>J</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last"><em>Required if this is the first plot command</em>.
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>J</strong><span class="classifier">str</span></dt><dd><p><em>Required if this is the first plot command</em>.
 Select map projection.</p>
 </dd>
-<dt><strong>R</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str or list</span></dt>
-<dd><p class="first last"><em>Required if this is the first plot command</em>.
+<dt><strong>R</strong><span class="classifier">str or list</span></dt><dd><p><em>Required if this is the first plot command</em>.
 <code class="docutils literal notranslate"><span class="pre">'xmin/xmax/ymin/ymax[+r][+uunit]'</span></code>.
 Specify the region of interest.</p>
 </dd>
-<dt><strong>B</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">Set map boundary frame and axes attributes.</p>
+<dt><strong>B</strong><span class="classifier">str</span></dt><dd><p>Set map boundary frame and axes attributes.</p>
 </dd>
-<dt><strong>L</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last"><code class="docutils literal notranslate"><span class="pre">'[g|j|J|n|x]refpoint'</span></code>
+<dt><strong>L</strong><span class="classifier">str</span></dt><dd><p><code class="docutils literal notranslate"><span class="pre">'[g|j|J|n|x]refpoint'</span></code>
 Draws a simple map scale centered on the reference point specified.</p>
 </dd>
-<dt><strong>Td</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">Draws a map directional rose on the map at the location defined by
+<dt><strong>Td</strong><span class="classifier">str</span></dt><dd><p>Draws a map directional rose on the map at the location defined by
 the reference and anchor points.</p>
 </dd>
-<dt><strong>Tm</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">Draws a map magnetic rose on the map at the location defined by the
+<dt><strong>Tm</strong><span class="classifier">str</span></dt><dd><p>Draws a map magnetic rose on the map at the location defined by the
 reference and anchor points</p>
 </dd>
-<dt><strong>U</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool or str</span></dt>
-<dd><p class="first last">Draw GMT time stamp logo on plot.</p>
+<dt><strong>U</strong><span class="classifier">bool or str</span></dt><dd><p>Draw GMT time stamp logo on plot.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <div style='clear:both'></div></div>
@@ -307,7 +300,7 @@ reference and anchor points</p>
         <a href="pygmt.Figure.coast.html" class="btn btn-neutral float-right" title="pygmt.Figure.coast" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pygmt.Figure.html" class="btn btn-neutral" title="pygmt.Figure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pygmt.Figure.html" class="btn btn-neutral float-left" title="pygmt.Figure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -317,7 +310,9 @@ reference and anchor points</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017-2019, The PyGMT Developers.
-      Last updated on Jan 26, 2019.
+      <span class="lastupdated">
+        Last updated on Apr 06, 2019.
+      </span>
 
     </p>
   </div>
@@ -334,26 +329,16 @@ reference and anchor points</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -22,36 +22,38 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="_static/style.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Making your first figure" href="tutorials/overview.html" />
-    <link rel="prev" title="Disclaimer" href="index.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+    <link rel="next" title="Making your first figure" href="tutorials/first-figure.html" />
+    <link rel="prev" title="Overview" href="overview.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
     <a href="index.html"><h2 class="sidebar-title">PyGMT</h2></a>
 
@@ -86,6 +88,7 @@
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installing</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#which-python">Which Python?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#which-gmt">Which GMT?</a></li>
@@ -97,7 +100,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#finding-the-gmt-shared-library">Finding the GMT shared library</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/overview.html">Making your first figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/first-figure.html">Making your first figure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gallery/index.html">Gallery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">User Guide</span></p>
@@ -224,14 +227,15 @@
 <div class="section" id="installing">
 <span id="install"></span><h1>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h1>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>🚨 <strong>This package is in early stages of design and implementation.</strong> 🚨</p>
-<blockquote class="last">
-<div>We welcome any feedback and ideas!
+<blockquote>
+<div><p>We welcome any feedback and ideas!
 Let us know by submitting
 <a class="reference external" href="https://github.com/GenericMappingTools/pygmt/issues">issues on Github</a>
 or send us a message on our
-<a class="reference external" href="https://gitter.im/GenericMappingTools/pygmt">Gitter chatroom</a>.</div></blockquote>
+<a class="reference external" href="https://gitter.im/GenericMappingTools/pygmt">Gitter chatroom</a>.</p>
+</div></blockquote>
 </div>
 <div class="section" id="which-python">
 <h2>Which Python?<a class="headerlink" href="#which-python" title="Permalink to this headline">¶</a></h2>
@@ -255,14 +259,14 @@ response to the development of PyGMT, mainly the new
 <h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
 <p>PyGMT requires the following libraries:</p>
 <ul class="simple">
-<li><a class="reference external" href="http://www.numpy.org/">numpy</a></li>
-<li><a class="reference external" href="https://pandas.pydata.org/">pandas</a></li>
-<li><a class="reference external" href="http://xarray.pydata.org/">xarray</a></li>
-<li><a class="reference external" href="https://pypi.org/project/packaging/">packaging</a></li>
+<li><p><a class="reference external" href="http://www.numpy.org/">numpy</a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/">pandas</a></p></li>
+<li><p><a class="reference external" href="http://xarray.pydata.org/">xarray</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/packaging/">packaging</a></p></li>
 </ul>
 <p>The following are optional (but recommended) dependencies:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://ipython.org/">IPython</a>: For embedding the figures in Jupyter notebooks.</li>
+<li><p><a class="reference external" href="https://ipython.org/">IPython</a>: For embedding the figures in Jupyter notebooks.</p></li>
 </ul>
 </div>
 <div class="section" id="installing-gmt">
@@ -274,8 +278,8 @@ GMT development version, available from <a class="reference external" href="http
 Currently, we don’t have tests running on Windows yet, so things might be broken.
 Please report any errors by <a class="reference external" href="https://github.com/GenericMappingTools/pygmt/issues">creating an issue on Github</a>.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">We used to maintain conda packages for the latest GMT. That caused many problems and
+<p class="admonition-title">Note</p>
+<p>We used to maintain conda packages for the latest GMT. That caused many problems and
 was very difficult to maintain updated. We have opted to not do that anymore so that
 we can develop more quickly. Once GMT 6 is officially released, we’ll have conda
 packages available again. Please bear with us.</p>
@@ -348,10 +352,10 @@ This should be set to the directory where <code class="docutils literal notransl
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tutorials/overview.html" class="btn btn-neutral float-right" title="Making your first figure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tutorials/first-figure.html" class="btn btn-neutral float-right" title="Making your first figure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Disclaimer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -361,7 +365,9 @@ This should be set to the directory where <code class="docutils literal notransl
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017-2019, The PyGMT Developers.
-      Last updated on Jan 26, 2019.
+      <span class="lastupdated">
+        Last updated on Apr 06, 2019.
+      </span>
 
     </p>
   </div>
@@ -378,26 +384,16 @@ This should be set to the directory where <code class="docutils literal notransl
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
